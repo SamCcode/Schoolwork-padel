@@ -1,16 +1,45 @@
 import { Route, Routes } from "react-router-dom";
 import './App.css'
+import { useDispatch } from "react-redux";
+import { addInitialPlayers,addInitialCourts } from "./actions/padelActions";
+import { useEffect } from "react";
+import Start from "./pages/Start";
+import Home from "./pages/Home";
+import Courts from "./pages/Courts";
+import Members from "./pages/Members";
+import NewMember from "./pages/NewMember";
+
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchInitialPlayers() {
+      const response = await fetch("./players.json")
+      let data = await response.json()
+      dispatch(addInitialPlayers(data))
+    }
+    async function fetchInitialCourts() {
+      const response = await fetch("./courts.json")
+      let data = await response.json()
+      dispatch(addInitialCourts(data))
+    }
+    
+    fetchInitialPlayers()
+    fetchInitialCourts()
+  }, [])
+
+  
 
   return (
     <div className="App">
-       <Routes>
-          <Route path="/" element={<Start />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/courts" element={<Courts />}></Route>
-          <Route path="/members" element={<Members />}></Route>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Start />}></Route>
+        <Route path="/register" element={<NewMember />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/courts" element={<Courts />}></Route>
+        <Route path="/members" element={<Members />}></Route>
+      </Routes>
     </div>
   )
 }

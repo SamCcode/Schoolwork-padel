@@ -1,12 +1,15 @@
-function CourtCard({children}) {
-    return ( 
-        <div>
-            <h2>{children.name}</h2>
-            <p>{children.phone}</p>
-            <p>{children.mail}</p>
-            <p>{children.price}</p>
-        </div>
-     );
+function CourtCard({ court }) {
+    return (
+        <>
+            <h3>{court.name}</h3>
+            <img src={court.img} alt="image of a padel court" />
+            <p>location:{court.location}</p>
+            <p>price:{court.price}</p>
+            <p>Phone:{court.phoneNumber}</p>
+            <p>{court.website}</p>
+            <p>{court.mail}</p>
+        </>
+    );
 }
 
 export default CourtCard;
