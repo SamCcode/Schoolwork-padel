@@ -1,0 +1,76 @@
+@import "../Styles/variables";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 50%;
+
+    h1 {
+        font-size: $largeFont;
+        color: $color_gray;
+    }
+
+    .login {
+        color: $color_infoYellow;
+        font-size: $mediumFont;
+    }
+
+    p {
+        color: $color_lightgray;
+        font-size: $smallFont;
+    }
+
+    .wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.89);
+        border-radius: 3px;
+        padding: 70px 100px;
+        width: 80%;
+
+
+        .input {
+            position: relative;
+            margin-bottom: 25px;
+
+            input {
+                border: 0;
+                border-bottom: 1px solid $color_gray;
+                background: transparent;
+                width: 8rem;
+                padding: 8px 0 5px 0;
+                font-size: $mediumFont;
+                color: $color_textOrange;
+            }
+
+            input::placeholder {
+                color: $color_gray;
+            }
+
+            input:focus::placeholder {
+                color: $color_infoYellow;
+            }
+
+            input:focus {
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $color_infoYellow;
+            }
+        }
+
+        p {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}
