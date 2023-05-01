@@ -1,0 +1,17 @@
+@import "../Styles/variables";
+.primaryBtn {
+    background: $color_gray;
+    border-radius: 3px;
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: $mediumFont;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.75rem 54px;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+}

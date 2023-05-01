@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PrimaryBtn from "../components/PrimaryBtn";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import style from "../Styles/Start.module.scss"
 
 
 
@@ -43,23 +44,34 @@ function Start() {
         }
     }, [addNewPlayer, loggedIn]);
 
+    console.log(valid);
+    // console.log(clicked);
     return (
-        <div>
+
+        <section className={style.container}>
             <h1>Padel Maniac</h1>
             {clicked ? (
-                <>
-                    <input type="text" placeholder="EMAIL" onChange={handleInputValue} />
-                    <PrimaryBtn onClick={handleLogin}>Ok</PrimaryBtn>
-                </>
+                <section className={style.wrapper}>
+                        <aside className={style.input}>
+                            <input type="text" placeholder="Email" onChange={handleInputValue} />
+                        </aside>
+                   
+                    {!valid && (
+                    <PrimaryBtn onClick={handleLogin}>submit</PrimaryBtn> 
+                    )}
+                    {valid && (
+                        <p>wrong email. Try again or <span onClick={() => { setAddNewPlayer(true) }}>create an account.</span></p>
+                        )}
+                        <p>Forgot Email?</p> {/* lägg till länk osv */}
+                        
+                </section>
             ) : (
-                <PrimaryBtn onClick={() => { setClicked(true) }}>log in</PrimaryBtn>
+                <p className={style.login} onClick={() => { setClicked(true) }}>log in</p>
             )}
-            {clicked && valid && (
-                <>
-                    <p>wrong email, try again or create an account.</p>
-                </>)}
-            <p onClick={() => { setAddNewPlayer(true) }}>Create account</p>
-        </div>
+
+            <p onClick={() => { setAddNewPlayer(true) }}>no account?</p>
+        </section>
+
     );
 
 }

@@ -1,7 +1,7 @@
-
+import style from "../Styles/Header.module.scss"
 function Header({ children }) {
     return (
-        <header>
+        <header className={style.header}>
             <h1>{children}</h1>
             <nav><a href="/home">home</a></nav>
             <nav><a href="/courts">courts</a></nav>

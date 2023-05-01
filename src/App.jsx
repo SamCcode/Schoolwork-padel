@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import './App.css'
+import './App.scss'
 import { useDispatch } from "react-redux";
 import { addInitialPlayers,addInitialCourts } from "./actions/padelActions";
 import { useEffect } from "react";
@@ -32,7 +32,7 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div className="container">
       <Routes>
         <Route path="/" element={<Start />}></Route>
         <Route path="/register" element={<NewMember />}></Route>
