@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Courts from "./pages/Courts";
 import Members from "./pages/Members";
 import NewMember from "./pages/NewMember";
+import MyAccount from "./pages/MyAccount";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/courts" element={<Courts />}></Route>
         <Route path="/members" element={<Members />}></Route>
+        <Route path="/myaccount" element={<MyAccount />}></Route>
       </Routes>
     </div>
   )

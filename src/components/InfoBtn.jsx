@@ -1,6 +1,8 @@
+import style from "../Styles/InfoBtn.module.scss"
+
 function InfoBtn({ children, onClick }) {
     return (
-        <button type="button" onClick={onClick}>
+        <button className={style.btn} type="button" onClick={onClick}>
             {children}
         </button>);
 }

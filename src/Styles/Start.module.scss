@@ -33,6 +33,7 @@
         flex-direction: column;
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 0.89);
+        border: 1px solid $color_textOrange;
         border-radius: 3px;
         padding: 70px 100px;
         width: 80%;
@@ -40,7 +41,7 @@
 
         .input {
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 1rem;
 
             input {
                 border: 0;
@@ -48,7 +49,7 @@
                 background: transparent;
                 width: 8rem;
                 padding: 8px 0 5px 0;
-                font-size: $mediumFont;
+                font-size: $smallFont;
                 color: $color_textOrange;
             }
 
@@ -66,11 +67,14 @@
                 border-bottom: 1px solid $color_infoYellow;
             }
         }
-
-        p {
+        
+        .fail {
+            color: $color_infoYellow;
+            margin-bottom: 2rem;
             span {
                 text-decoration: underline;
             }
         }
+        
     }
 }

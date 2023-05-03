@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import PrimaryBtn from "../components/PrimaryBtn";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import style from "../Styles/Start.module.scss"
+import { addActivePlayer } from "../actions/padelActions";
 
 
 
 
 function Start() {
     const players = useSelector((state) => { return state.players })
+    const dispatch = useDispatch();
     const navigate = useNavigate()
     const [clicked, setClicked] = useState(false)
     const [valid, setValid] = useState(false)
@@ -28,6 +30,7 @@ function Start() {
             players.map((player) => {
                 if (Object.is(player.email, inputValue)) {
                     setLoggedIn(true)
+                    dispatch(addActivePlayer(player))
                 } else {
                     setValid(true);
                 }
@@ -44,8 +47,6 @@ function Start() {
         }
     }, [addNewPlayer, loggedIn]);
 
-    console.log(valid);
-    // console.log(clicked);
     return (
 
         <section className={style.container}>
@@ -60,7 +61,7 @@ function Start() {
                     <PrimaryBtn onClick={handleLogin}>submit</PrimaryBtn> 
                     )}
                     {valid && (
-                        <p>wrong email. Try again or <span onClick={() => { setAddNewPlayer(true) }}>create an account.</span></p>
+                        <p className={style.fail}>wrong email. Try again or <span onClick={() => { setAddNewPlayer(true) }}>create an account.</span></p>
                         )}
                         <p>Forgot Email?</p> {/* lägg till länk osv */}
                         

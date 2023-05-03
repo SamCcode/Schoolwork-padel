@@ -25,4 +25,19 @@ const addNewPlayer = (data) => {
         payload: data
     }
 }
-export {addInitialCourts, addNewCourt, addInitialPlayers, addNewPlayer}
+
+const addActivePlayer = (data) => {
+    return {
+        type: "ADD_ACTIVE_PLAYER",
+        payload: data
+    }
+}
+
+const changePlayerInfo = (data) => {
+
+    return {
+        type: "CHANGE_PLAYER_INFO",
+        payload: data
+    }
+}
+export {addInitialCourts, addNewCourt, addInitialPlayers, addNewPlayer, addActivePlayer, changePlayerInfo}

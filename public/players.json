@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Samuel Karlsson",
         "email":"samuelc1266@hotmail.com",
         "preferedcourt":"CDM",
@@ -8,6 +9,7 @@
         "available":"true"
     },
     {
+        "id": 2,
         "name": "Fredric Johansson",
         "email":"fredric@hotmail.com",
         "preferedcourt":"Orange",
@@ -16,6 +18,7 @@
         "available":"true"
     },
     {
+        "id": 3,
         "name": "Berit Johansson",
         "email":"berit@hotmail.com",
         "preferedcourt":"Orange",
@@ -24,6 +27,7 @@
         "available":"true"
     },
     {
+        "id": 4,
         "name": "Magnus Erixon",
         "email":"Magnus@hotmail.com",
         "preferedcourt":"Capitan",
@@ -32,6 +36,7 @@
         "available":"false"
     },
     {
+        "id": 5,
         "name": "Eva Jönsson",
         "email":"Eva@hotmail.com",
         "preferedcourt":"CDM",

@@ -1,23 +1,24 @@
 @import "../Styles/variables";
-.primaryBtn {
+
+.btn {
     background: $color_textOrange;
     border-radius: 3px;
     font-family: "Fira Sans";
     font-style: normal;
     font-weight: 600;
-    font-size: $mediumFont;
+    font-size: 22px;
     line-height: 26px;
     text-align: center;
     color: $color_darkgray;
-    padding: 0.5rem 30px;
+    padding: 15px 20px;
     border: none;
-    width: fit-content;
+    margin: 1rem;
+    width: 18rem;
     cursor: pointer;
     transition: 0.2s;
-    margin: 0.5rem;
 }
 
-.primaryBtn:hover {
+.btn:hover {
     background: $color_infoYellow;
     color: $color_gray;
 }
