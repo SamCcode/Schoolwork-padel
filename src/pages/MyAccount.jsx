@@ -32,19 +32,23 @@ function MyAccount() {
             <Navbar>My account</Navbar>
             {deleteAccount ? (
                 <section className={style.wrapper}>
-                      <MembersCard player={myPlayer} change={change} onFormSubmit={handleFormSubmit} onClose={handleClose} />
+                    <MembersCard player={myPlayer} change={change} onFormSubmit={handleFormSubmit} onClose={handleClose} />
                     <p>Are you sure?</p>
                     <div className={style.buttonwrapper}>
-                    <PrimaryBtn onClick={handleDelete }>Yes!</PrimaryBtn>
-                    <PrimaryBtn onClick={() => { setDeleteAccount(false) }}>No!</PrimaryBtn>
+                        <PrimaryBtn onClick={handleDelete}>Yes!</PrimaryBtn>
+                        <PrimaryBtn onClick={() => { setDeleteAccount(false) }}>No!</PrimaryBtn>
                     </div>
                 </section>
-            ) : 
-            <section className={style.wrapper}>
-                <MembersCard player={myPlayer} change={change} onFormSubmit={handleFormSubmit} onClose={handleClose} />
-                <PrimaryBtn onClick={() => { setChange(true) }}>Change account?</PrimaryBtn>
-                <PrimaryBtn onClick={() => { setDeleteAccount(true) }}>Delete account?</PrimaryBtn>
-            </section>}
+            ) :
+                <section className={style.wrapper}>
+                    <MembersCard player={myPlayer} change={change} onFormSubmit={handleFormSubmit} onClose={handleClose} />
+                    {change ? null : (
+                        <>
+                            <PrimaryBtn onClick={() => { setChange(true) }}>Change account?</PrimaryBtn>
+                            <PrimaryBtn onClick={() => { setDeleteAccount(true) }}>Delete account?</PrimaryBtn>
+                        </>
+                    )}
+                </section>}
         </section>
     );
 }
