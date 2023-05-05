@@ -59,9 +59,18 @@ const padelReducer =(state = initialState, action) => {
             }
         }
 
+        case "DELETE_PLAYER": {
+            const updatedPlayers = state.players.filter(player => player.id !== action.payload.id);
+            return {
+                ...state,
+                players: updatedPlayers
+            }
+        }
+
         default:
            return state
     }
+
 }
 
 export default padelReducer;

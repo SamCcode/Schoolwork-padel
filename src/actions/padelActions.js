@@ -40,4 +40,12 @@ const changePlayerInfo = (data) => {
         payload: data
     }
 }
-export {addInitialCourts, addNewCourt, addInitialPlayers, addNewPlayer, addActivePlayer, changePlayerInfo}
+
+const deletePlayer = (data) => {
+
+    return {
+        type: "DELETE_PLAYER",
+        payload: data
+    }
+}
+export {addInitialCourts, addNewCourt, addInitialPlayers, addNewPlayer, addActivePlayer, changePlayerInfo, deletePlayer}

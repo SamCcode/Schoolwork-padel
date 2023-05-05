@@ -11,5 +11,9 @@
         align-items: center;
         min-height: 667px;
         max-width: 18rem;
+
+        .buttonwrapper {
+            display: flex;
+        }
     }
 }
