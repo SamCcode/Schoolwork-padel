@@ -1,0 +1,68 @@
+@import "../Styles/variables";
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
+    max-height: 15rem;
+    padding: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.89);
+    border: 1px solid $color_textOrange;
+    border-radius: 3px;
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        margin: 0;
+        width: 2rem;
+    }
+
+    input {
+        border: 0;
+        border-bottom: 1px solid $color_gray;
+        background: transparent;
+        width: 10rem;
+        margin-left: auto;
+        font-size: $smallFont;
+        color: $color_gray;
+        text-align: end;
+    }
+
+    input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $color_infoYellow;
+        color: $color_textOrange;
+    }
+
+    .button {
+        justify-content: center;
+        button {
+            background: $color_textOrange;
+            border-radius: 3px;
+            font-family: "Fira Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: $mediumFont;
+            line-height: 26px;
+            text-align: center;
+            color: $color_darkgray;
+            padding: 0.3rem 15px;
+            border: none;
+            width: fit-content;
+            cursor: pointer;
+            transition: 0.2s;
+            margin: 0.5rem;
+        }
+
+        button:hover {
+            background: $color_infoYellow;
+            color: $color_gray;
+        }
+    }
+
+}

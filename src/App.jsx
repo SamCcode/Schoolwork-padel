@@ -7,7 +7,6 @@ import Start from "./pages/Start";
 import Home from "./pages/Home";
 import Courts from "./pages/Courts";
 import Members from "./pages/Members";
-import NewMember from "./pages/NewMember";
 import MyAccount from "./pages/MyAccount";
 
 
@@ -36,7 +35,6 @@ function App() {
     <div className="container">
       <Routes>
         <Route path="/" element={<Start />}></Route>
-        <Route path="/register" element={<NewMember />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/courts" element={<Courts />}></Route>
         <Route path="/members" element={<Members />}></Route>

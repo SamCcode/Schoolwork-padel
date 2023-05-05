@@ -15,6 +15,7 @@ function Home() {
                 <h3>{activePlayer.name}</h3>
                 <InfoBtn onClick={() => { navigate("/courts") }}>Courts in Orihuela Costa</InfoBtn>
                 <InfoBtn onClick={() => { navigate("/members") }}>Members</InfoBtn>
+                <InfoBtn onClick={() => { navigate("/myaccount") }}>My account</InfoBtn>
             </section>
         </>
     );

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import style from "../Styles/Start.module.scss"
 import { addActivePlayer } from "../actions/padelActions";
+import PlayerForm from "../components/PlayerForm";
 
 
 
@@ -17,6 +18,7 @@ function Start() {
     const [inputValue, setInputValue] = useState("")
     const [addNewPlayer, setAddNewPlayer] = useState(false)
     const [loggedIn, setLoggedIn] = useState(false)
+    const [forgotEmail, setForgotEmail] = useState(false)
 
 
     const handleInputValue = (e) => {
@@ -38,19 +40,26 @@ function Start() {
         }
     };
 
+    const handleClosePlayerForm = () => {
+        setAddNewPlayer(false);
+      };
+
     useEffect(() => {
-        if (addNewPlayer) {
-            navigate("/register");
-        }
         if (loggedIn) {
             navigate("/home");
         }
     }, [addNewPlayer, loggedIn]);
 
     return (
-
+        addNewPlayer ? (
+            <section className={style.formwrapper}>
+                <h1>Add new account!</h1>
+            <PlayerForm user={{}} type="newPlayer" onClose={handleClosePlayerForm} />
+            </section>
+          ) : (
         <section className={style.container}>
             <h1>Padel Maniac</h1>
+            
             {clicked ? (
                 <section className={style.wrapper}>
                         <aside className={style.input}>
@@ -63,7 +72,9 @@ function Start() {
                     {valid && (
                         <p className={style.fail}>wrong email. Try again or <span onClick={() => { setAddNewPlayer(true) }}>create an account.</span></p>
                         )}
-                        <p>Forgot Email?</p> {/* lägg till länk osv */}
+                        {forgotEmail ? <p>Send a request to info@padelmaniac.com</p> : <p onClick={() => { setForgotEmail(true); setTimeout(() => {
+    setForgotEmail(false);
+  }, 3000); }}>Forgot Email?</p>  }
                         
                 </section>
             ) : (
@@ -71,7 +82,7 @@ function Start() {
             )}
 
             <p onClick={() => { setAddNewPlayer(true) }}>no account?</p>
-        </section>
+        </section>)
 
     );
 

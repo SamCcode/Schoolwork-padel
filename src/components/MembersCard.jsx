@@ -1,12 +1,15 @@
+import { useState } from "react";
 import style from "../Styles/MembersCard.module.scss"
 import PlayerForm from "./PlayerForm";
-function MembersCard({ player, change }) {
-    console.log(player.name);
+function MembersCard({ player, change, onClose, onFormSubmit }) {
+   
+    
     return (
         <section className={style.wrapper}>
             {change ? (
                 <>
-                    <PlayerForm user={player}/>
+                    
+                <PlayerForm user={player} onClose={onClose} onSubmit={onFormSubmit} />
                 </>
                 ) :
                 <>

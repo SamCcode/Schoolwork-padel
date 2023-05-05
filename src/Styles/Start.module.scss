@@ -1,4 +1,15 @@
 @import "../Styles/variables";
+.formwrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 667px;
+    h1 {
+        margin-bottom: 3rem;
+        color: $color_infoYellow;
+    }
+}
 
 .container {
     display: flex;
