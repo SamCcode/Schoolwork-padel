@@ -5,8 +5,8 @@ form {
     flex-direction: column;
     justify-content: center;
     width: 20rem;
-    max-height: 15rem;
-    padding: 3rem;
+    max-height: 20rem;
+    padding: 2rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.89);
     border: 1px solid $color_textOrange;
@@ -14,14 +14,24 @@ form {
     div {
         display: flex;
         align-items: center;
+        div{
+            font-size: $smallFont;
+            position: absolute;
+            right: 3.8rem;
+            margin-top: 1rem;
+            color: $color_infoYellow;
+        }
     }
 
     p {
-        margin: 0;
-        width: 2rem;
+        margin-bottom: 1rem;
+        width: 5rem;
+        font-size: $smallFont;
+
     }
 
     input {
+        margin-bottom: 1rem;
         border: 0;
         border-bottom: 1px solid $color_gray;
         background: transparent;

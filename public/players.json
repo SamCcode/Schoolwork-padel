@@ -6,7 +6,7 @@
         "preferedcourt":"CDM",
         "phonenumber":"+46703212358",
         "level":"4",
-        "available":"true"
+        "available":"yes"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "preferedcourt":"Orange",
         "phonenumber":"+34999666",
         "level":"5",
-        "available":"true"
+        "available":"yes"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "preferedcourt":"Orange",
         "phonenumber":"+34999666",
         "level":"6",
-        "available":"true"
+        "available":"yes"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "preferedcourt":"Capitan",
         "phonenumber":"+34999666",
         "level":"3",
-        "available":"false"
+        "available":"no"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "preferedcourt":"CDM",
         "phonenumber":"+34999666",
         "level":"2",
-        "available":"false"
+        "available":"no"
     }
     
 ]

@@ -81,7 +81,7 @@ function Start() {
                 <p className={style.login} onClick={() => { setClicked(true) }}>log in</p>
             )}
 
-            <p onClick={() => { setAddNewPlayer(true) }}>no account?</p>
+            <p className={style.noaccount} onClick={() => { setAddNewPlayer(true) }}>no account?</p>
         </section>)
 
     );
