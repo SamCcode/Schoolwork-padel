@@ -1,0 +1,40 @@
+@import "../Styles/variables";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20rem;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, 0.89);
+    border: 1px solid $color_textOrange;
+    border-radius: 3px;
+    
+
+    h3 {
+        align-self: center;
+    }
+
+    h5 {
+        align-self: center;
+        font-size: $smallFont;
+        margin: 0.5rem;
+    }
+
+    img {
+        max-width: 18rem;
+        margin-top: 0.5rem;
+    }
+
+    span {
+        color: $color_infoYellow;
+    }
+
+    p {
+        font-size: $smallFont;
+        margin-top: 0.4rem;
+    }
+
+}

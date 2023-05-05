@@ -1,0 +1,38 @@
+[
+    {
+        "name": "CDM Orihuela Costa",
+        "img": "https://images.dog.ceo/breeds/briard/n02105251_6840.jpg",
+        "location": "C/ NIAGARA, 23",
+        "price": "6.5",
+        "mail": "recepcionorihuela@vectoris.es",
+        "phoneNumber": "+34603749826",
+        "website":"https://deportes.orihuela.es/" 
+    },
+    {
+        "name": "Orange Padel",
+        "img": "https://images.dog.ceo/breeds/briard/n02105251_6840.jpg",
+        "location": "Calle Limón 19",
+        "price": "",
+        "mail": "info@orangepadel.com",
+        "phoneNumber": "+46731507049",
+        "website":"https://orangepadel.com/"  
+    },
+    {
+        "name": "El Capitan Sport Center",
+        "img": "https://images.dog.ceo/breeds/briard/n02105251_6840.jpg",
+        "location": "Calle fragata P Pr1,, Orihuela, Spain",
+        "price": "24",
+        "mail": "elcapitan.sportcenter@gmail.com",
+        "phoneNumber": "+34603235688",
+        "website":"https://www.facebook.com/elcapitan.sportcenter/?locale=es_ES"  
+    },
+    {
+        "name": "Campoamor Club",
+        "img": "https://images.dog.ceo/breeds/briard/n02105251_6840.jpg",
+        "location": " C. Gustavo A. Becquer, 03189 Dehesa de Campoamor",
+        "price": "8",
+        "mail": "info@campoamorclub.com",
+        "phoneNumber": "+34865408505",
+        "website":"https://campoamorclub.com/"  
+    }
+]

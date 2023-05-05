@@ -1,33 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+import './App.scss'
+import { useDispatch } from "react-redux";
+import { addInitialPlayers,addInitialCourts } from "./actions/padelActions";
+import { useEffect } from "react";
+import Start from "./pages/Start";
+import Home from "./pages/Home";
+import Courts from "./pages/Courts";
+import Members from "./pages/Members";
+import MyAccount from "./pages/MyAccount";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchInitialPlayers() {
+      const response = await fetch("./players.json")
+      let data = await response.json()
+      dispatch(addInitialPlayers(data))
+    }
+    async function fetchInitialCourts() {
+      const response = await fetch("./courts.json")
+      let data = await response.json()
+      dispatch(addInitialCourts(data))
+    }
+    
+    fetchInitialPlayers()
+    fetchInitialCourts()
+  }, [])
+
+  
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<Start />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/courts" element={<Courts />}></Route>
+        <Route path="/members" element={<Members />}></Route>
+        <Route path="/myaccount" element={<MyAccount />}></Route>
+      </Routes>
     </div>
   )
 }

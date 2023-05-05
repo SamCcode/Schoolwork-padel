@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Samuel Karlsson",
+        "email":"samuelc1266@hotmail.com",
+        "preferedcourt":"CDM",
+        "phonenumber":"+46703212358",
+        "level":"4",
+        "available":"true"
+    },
+    {
+        "id": 2,
+        "name": "Fredric Johansson",
+        "email":"fredric@hotmail.com",
+        "preferedcourt":"Orange",
+        "phonenumber":"+34999666",
+        "level":"5",
+        "available":"true"
+    },
+    {
+        "id": 3,
+        "name": "Berit Johansson",
+        "email":"berit@hotmail.com",
+        "preferedcourt":"Orange",
+        "phonenumber":"+34999666",
+        "level":"6",
+        "available":"true"
+    },
+    {
+        "id": 4,
+        "name": "Magnus Erixon",
+        "email":"Magnus@hotmail.com",
+        "preferedcourt":"Capitan",
+        "phonenumber":"+34999666",
+        "level":"3",
+        "available":"false"
+    },
+    {
+        "id": 5,
+        "name": "Eva Jönsson",
+        "email":"Eva@hotmail.com",
+        "preferedcourt":"CDM",
+        "phonenumber":"+34999666",
+        "level":"2",
+        "available":"false"
+    }
+    
+]
