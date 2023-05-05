@@ -72,7 +72,7 @@ function Start() {
                     {valid && (
                         <p className={style.fail}>wrong email. Try again or <span onClick={() => { setAddNewPlayer(true) }}>create an account.</span></p>
                         )}
-                        {forgotEmail ? <p>Send a request to info@padelmaniac.com</p> : <p onClick={() => { setForgotEmail(true); setTimeout(() => {
+                        {forgotEmail ? <p>Send a request to info@padelmaniac.com</p> : <p className={style.noaccount} onClick={() => { setForgotEmail(true); setTimeout(() => {
     setForgotEmail(false);
   }, 3000); }}>Forgot Email?</p>  }
                         

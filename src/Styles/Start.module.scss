@@ -27,6 +27,7 @@
     .login {
         color: $color_infoYellow;
         font-size: $mediumFont;
+        cursor: pointer;
     }
 
     p {
@@ -36,6 +37,7 @@
 
     .noaccount {
         font-style: italic;
+        cursor: pointer;
     }
 
     .wrapper {
