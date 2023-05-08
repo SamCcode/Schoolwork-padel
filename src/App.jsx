@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Courts from "./pages/Courts";
 import Members from "./pages/Members";
 import MyAccount from "./pages/MyAccount";
+import Games from "./pages/Games";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/courts" element={<Courts />}></Route>
         <Route path="/members" element={<Members />}></Route>
         <Route path="/myaccount" element={<MyAccount />}></Route>
+        <Route path="/games" element={<Games />}></Route>
       </Routes>
     </div>
   )

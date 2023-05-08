@@ -16,6 +16,7 @@ function Home() {
                 <InfoBtn onClick={() => { navigate("/courts") }}>Courts in Orihuela Costa</InfoBtn>
                 <InfoBtn onClick={() => { navigate("/members") }}>Members</InfoBtn>
                 <InfoBtn onClick={() => { navigate("/myaccount") }}>My account</InfoBtn>
+                <InfoBtn onClick={() => { navigate("/games") }}>Start a game</InfoBtn>
             </section>
         </>
     );
