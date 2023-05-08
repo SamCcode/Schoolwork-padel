@@ -1,4 +1,4 @@
-import style from "../Styles/MembersCard.module.scss"
+import style from "../Styles/MembersCard.module.scss";
 import PlayerForm from "./PlayerForm";
 function MembersCard({ player, change, onClose, onFormSubmit }) {
    
